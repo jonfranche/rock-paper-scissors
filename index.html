@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <script>
+        function computerPlay(){
+            let num = Math.floor(Math.random() * Math.floor(3));
+            if (num == 0)
+                return 'rock';
+            else if (num == 1)
+                return 'paper';
+            else
+                return 'scissors';
+        }
+
+        function round(computerSelection, playerSelection){
+            console.log('Computer: ' + computerSelection + ' Player: ' + playerSelection);
+            if (computerSelection == playerSelection)
+                return 'It is a draw';
+            else if (computerSelection == 'rock' 
+            && playerSelection.toLowerCase() == 'paper')
+                return 'You win! Paper beats Rock';
+            else if (computerSelection == 'rock' 
+            && playerSelection.toLowerCase() == 'scissors')
+                return 'You lose! Rock beats Scissors';
+            else if (computerSelection == 'paper' 
+            && playerSelection.toLowerCase() == 'scissors')
+                return 'You win! Scissors beats Paper';
+            else if (computerSelection == 'paper' 
+            && playerSelection.toLowerCase() == 'rock')
+                return 'You lose! Paper beats Rock';
+            else if (computerSelection == 'scissors' 
+            && playerSelection.toLowerCase() == 'rock')
+                return 'You win! Rock beats Scissors';
+            else if (computerSelection == 'scissors' 
+            && playerSelection.toLowerCase() == 'paper')
+                return 'You lose! Scissors beats Paper';
+        }
+
+        function game() {
+            console.log('Play Rock, Paper, Scissors with the Computer');
+            for (i = 0; i < 5; i++) {
+                let playerSelection = prompt('Type rock, paper, or scissors to play')
+                let computerSelection = computerPlay();
+                console.log(round(computerSelection, playerSelection));
+            }
+        }
+
+        console.log(game());
+    </script>
+</html>
