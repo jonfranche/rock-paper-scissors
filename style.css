@@ -1,0 +1,65 @@
+html{
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 700px;
+    width: auto;
+    display: grid;
+    background-color: rgb(230, 230, 150);
+    grid-template: 100px 200px 200px 200px / 1fr;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    justify-items: center;
+    align-items: center;
+}
+
+button {
+    font-size: 20px;
+    color: black;
+    height: 80px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.score {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+}
+
+.move {
+    width: auto;
+    display: grid;
+    grid-template-columns: 150px 200px 150px 200px;
+    height: 200px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#rock {
+    background-color: rgba(200, 150, 100, 1);
+}
+
+#scissors {
+    background-color: rgba(100, 100, 100, 1);
+}
